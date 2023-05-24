@@ -1,0 +1,66 @@
+body {
+    margin: 0px;
+  }
+  
+  header {
+    text-align: center;
+    font-weight: bold;
+    margin: 20px;
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  #gameGrid {
+    box-sizing: content-box;
+    border: 2px tomato solid;
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  #themes {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  .btn {
+    margin: 0px 2px;
+  }
+  
+  .pokeCard {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transition: transform 1s;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+  
+  .darkMode {
+    background-color: black;
+    color: white;
+  }
+  
+  .lightMode {
+    background-color: white;
+    color: black;
+  }
+  
+  .front_face,
+  .back_face {
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  .flip {
+    transform: rotateY(180deg);
+  }
+  
+  .front_face {
+    transform: rotateY(180deg);
+  }

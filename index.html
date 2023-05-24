@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COMP 2537 Assignment 4</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Import axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- Import jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+
+    <!-- Import Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div
+        id="difficulty"
+        class="btn-group btn-group-toggle m-3"
+        data-toggle="buttons"
+      >
+        <label class="btn btn-primary active">
+          <input
+            type="radio"
+            value="easy"
+            name="options"
+            id="easy"
+            autocomplete="off"
+            checked=""
+          />
+          Easy
+        </label>
+        <label class="btn btn-primary">
+          <input
+            type="radio"
+            value="medium"
+            name="options"
+            id="medium"
+            autocomplete="off"
+          />
+          Medium
+        </label>
+        <label class="btn btn-primary">
+          <input
+            type="radio"
+            value="hard"
+            name="options"
+            id="hard"
+            autocomplete="off"
+          />
+          Hard
+        </label>
+      </div>
+      <br />
+      <button class="btn btn-primary" id="resetButton">Reset</button>
+      <button class="btn btn-primary" id="start">Start</button>
+      <section id="info" style="display: none">
+        <h1>Total Number of Pairs: <span id="total">3</span></h1>
+        <h1>Number of Matches: <span id="matches"></span></h1>
+        <h1>Number of Pairs Left: <span id="left"></span></h1>
+        <h1>Number of Clicks: <span id="clicks"></span></h1>
+        <h1>
+          You got <span id="timer"></span> seconds.
+          <span id="time"></span> seconds passed!
+        </h1>
+      </section>
+    </header>
+    <div id="gameGrid" style="display: none"></div>
+    <section id="themes" class="text-center" style="display: none">
+      <button class="btn btn-dark" id="darkMode">Dark Mode</button>
+      <button class="btn btn-light" id="lightMode">Light Mode</button>
+    </section>
+  </body>
+</html>
